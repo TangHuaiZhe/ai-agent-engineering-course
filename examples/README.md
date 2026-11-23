@@ -1,23 +1,44 @@
-# 示例代码
+# Examples｜最小可运行代码
 
-## 1. 确定性模拟 Agent（零外部依赖）
+## 1. 最简 Agent Loop（不需要模型 API）
 
-```bash
+~~~bash
 python3 examples/deterministic_loop.py
+~~~
+
+用于建立“模型决策 → 工具执行 → Observation → 再决策”的最小概念，不包括真实审批或持久化。
+
+## 2. 进阶 Bounded Agent（Module 03 推荐）
+
+~~~bash
+python3 examples/bounded_agent.py
 python3 -m unittest discover -s tests -v
-```
+~~~
 
-它故意不用 LLM，展示一个 Agent Loop 必须具备的状态、工具分发、最大步骤和失败处理。真实 Agent 中的决策器可以替换为模型调用，但安全约束仍应由代码强制执行。
+这个示例将模型决策器抽象为 Protocol，使用 ScriptedDecider 模拟模型决策，演示：
 
-## 2. 真实模型的 Tool Calling（选做）
+- ToolRegistry 的工具白名单与 Schema 校验。
+- “模型提出请求”与“程序真正执行”之间的权限边界。
+- max_model_calls 与 max_tool_executions 两种独立预算。
+- 同一运行中重复 call_id 的结果重放和参数指纹冲突处理。
+- 对意外异常返回脱敏错误码，不泄露原始异常信息。
+- 对有副作用的 save_note 工具要求明确审批标志。
 
-```bash
+**重要限制：** 这不是生产可用的审批系统，也没有跨进程幂等台账、OAuth、壁钟超时、令牌/金额预算或结构化分布式追踪。生产系统必须将权限与操作资源/调用方/具体参数绑定，持久记录审批与执行状态，并考虑多机并发。
+
+对应教程：[Module 03](../modules/03-agent-architecture/README.md) | [Lab 01](../labs/lab-01-bounded-agent.md)。
+
+## 3. 真实模型 Function Calling（选做）
+
+~~~bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install openai
-export OPENAI_API_KEY='your-key-from-a-secret-manager'
+export OPENAI_API_KEY='your-secret-key'
 export OPENAI_MODEL='a-model-available-to-your-account'
 python3 examples/openai_tool_agent.py
-```
+~~~
 
-该示例只暴露两个算术工具，不读取文件、不调用 Shell、不访问网络上的用户数据。**模型选择由环境变量显式配置**。示例 API 按 Responses 风格编写；供应商 SDK 有演进时请核对官方文档。
+真实模型调用示例使用 OpenAI Responses API 的工具调用形式；不需要赋予文件系统或 Shell 访问权限。建议先读当前官方 [API 文档](https://platform.openai.com/docs/overview) 并检查 SDK 版本。
+
+**不要提交 API Key**，也不要把学习示例的内存授权或模拟处理当成真实产品的安全策略。

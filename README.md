@@ -1,73 +1,63 @@
 # AI Agent 工程师：从原理到生产实践
 
-> 一门面向软件工程师的中文、项目驱动的 AI Agent Engineering 课程。
+> 面向软件工程师的中文、项目驱动 AI Agent Engineering 课程。
 >
-> 目标：从会调用 LLM API，进阶到能够设计、实现、评测、安全部署生产级 Agent 系统。
+> 核心目标：把模型的不确定性决策变成可靠、可控、可评测、可审计的软件系统。
 
-![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-draft%20v0.1.0-lightgrey)
+![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.2.0%20in%20progress-lightgrey)
 
-## 这门课解决什么问题？
+## 适合谁？
 
-Agent 工程不是把大模型套在一个聊天 UI 上。它要求把**不确定性的模型决策**和**确定性的软件执行边界**结合起来，让系统能规划、调用工具、核验结果、恢复失败，同时可观察、可评测、可审计。
+有基本编程经验，想从 LLM API 走向 Agent 系统工程的学习者。你不需要先训练大模型，但应理解基本 HTTP、函数、异常、测试和 Git。课程实践以 Python 为主，核心架构思想不依赖某种语言或框架。
 
-**学习成果：**
-1. 不依赖框架实现带有工具调用、最大步数、错误处理与停止条件的 Agent Loop。
-2. 设计安全的 Tool/MCP 接口，掌握状态、知识检索与上下文管理。
-3. 实现复杂工作流：并行、分支、人工审批、持久化与恢复。
-4. 建立评测集、回归测试和 Trace；能够量化成功率、延迟和成本。
-5. 交付一个有安全边界、运行指标和部署文档的端到端 Agent 项目。
+## 十大核心模块
 
-## 课程地图
-
-| 模块 | 主题 | 关键产出 |
+| 模块 | 主题 | 本课程的交付标准 |
 |---|---|---|
-| [01](modules/01-software-engineering/README.md) | 软件工程基础 | API、任务执行与测试基座 |
-| [02](modules/02-llm-foundations/README.md) | LLM 原理与模型 API | Prompt/结构化输出实验 |
-| [03](modules/03-agent-architecture/README.md) | Agent 架构与循环 | 自研 Agent Loop |
-| [04](modules/04-tools-mcp/README.md) | 工具调用与 MCP | 受限工具集成 |
-| [05](modules/05-rag-memory/README.md) | RAG 与记忆 | 可溯源检索 |
-| [06](modules/06-orchestration/README.md) | 工作流编排 | 持久化多步流程 |
-| [07](modules/07-context-engineering/README.md) | Context Engineering | 上下文预算及压缩策略 |
-| [08](modules/08-evaluation/README.md) | Evals 与可观测性 | 基准集、Trace 与回归报告 |
-| [09](modules/09-security/README.md) | Agent 安全 | 威胁建模与防注入测试 |
-| [10](modules/10-production/README.md) | 生产部署与可靠性 | 可恢复服务及运行手册 |
+| [01](modules/01-software-engineering/README.md) | Software Engineering | API、类型、异步与测试基座 |
+| [02](modules/02-llm-foundations/README.md) | LLM Foundations | Prompt、API、Structured Outputs |
+| **[03](modules/03-agent-architecture/README.md)** | **Agent Architecture** | **5 节正式讲义 + 有边界的 Agent Runner + 测试** |
+| [04](modules/04-tools-mcp/README.md) | Tools & MCP | 工具协议、权限、批准与幂等 |
+| [05](modules/05-rag-memory/README.md) | RAG & Memory | 可靠检索、记忆更新与引用 |
+| [06](modules/06-orchestration/README.md) | Orchestration | 路由、并行、Checkpoint、HITL |
+| [07](modules/07-context-engineering/README.md) | Context Engineering | 上下文预算与可信边界 |
+| [08](modules/08-evaluation/README.md) | Evaluation & Observability | Evals、Trace、回归测试 |
+| [09](modules/09-security/README.md) | Agent Security | 注入防护、权限隔离与审计 |
+| [10](modules/10-production/README.md) | Production Engineering | 部署、限流、故障恢复与 SLO |
 
-完整顺序见 [12 周学习路线](ROADMAP.md)；学习内容与验收方式见 [课程大纲](SYLLABUS.md)。
+除 Module 03 外，其余模块目前以知识地图和实践提纲为主，后续会逐步扩写为完整课程。
 
-## 从哪里开始？
+## 从这里开始（当前推荐）
 
-1. 阅读 [先修知识](docs/prerequisites.md) 与 [学习方式](docs/study-guide.md)。
-2. 阅读 [第 03 模块](modules/03-agent-architecture/README.md) 的 Agent Loop 思维模型（即使你还不熟悉 LLM）。
-3. 运行不需要 API Key 的第一个示例：
+1. 阅读 [先修知识](docs/prerequisites.md) 和 [12 周学习路线](ROADMAP.md)。
+2. 从 [Module 03：Agent 架构](modules/03-agent-architecture/README.md) 进入五节讲义，先明确 Agent 与 Workflow 的区别。
+3. 运行两个不用模型 API Key 的示例：
 
-```bash
+~~~bash
 python3 examples/deterministic_loop.py
+python3 examples/bounded_agent.py
 python3 -m unittest discover -s tests -v
-```
+~~~
 
-4. 如有模型 API 权限，可运行 [真实模型调用示例](examples/README.md)，它使用只读的确定性工具。
-5. 按 [实践任务](labs/README.md) 完成阶段里程碑。
+4. 完成 [Lab 01：实现有边界的 Agent Loop](labs/lab-01-bounded-agent.md)，至少增加一个失败测试。
+5. 有真实 API 权限时，再尝试 [可选的真实模型工具调用示例](examples/README.md)。
 
-## 综合实战：上市公司研究 Agent
+## 课程理念
 
-[项目说明](projects/equity-research-agent/README.md) | [系统架构](projects/equity-research-agent/ARCHITECTURE.md) | [验收标准](projects/equity-research-agent/ACCEPTANCE.md)
+- **先原理后框架**：不把 LangGraph、Agents SDK、MCP 和 Skills 混作一谈。
+- **先确定性后自主性**：能用固定 Workflow 做到的，不必强行使用 Agent。
+- **先单 Agent 后 Multi-Agent**：复杂度应由真实评测收益证明。
+- **先可观测后优化**：没有可复现的测试集，就没有可靠的质量提升结论。
+- **安全由软件强制**：模型的 ToolCall 不是权限声明。
+- **案例贴近工程**：贯穿上市公司研究 Agent，用来源、计算、权限和评测连接知识。
 
-该项目包含 Research Planner、资料检索、结构化财报抽取、指标计算、引文核验、审核与报告生成。特别强调：**原始事实与模型推断分离，不得伪造数据，不以模型生成内容代替来源核验。**
+## 综合项目
 
-## 课程原则
+[上市公司研究 Agent](projects/equity-research-agent/README.md)：研究规划、资料采集、数字抽取、确定性财务计算、引用核验与报告生成。所有数字必须保留来源、时间、单位和口径，禁止伪造数据。
 
-- **先原理，后框架**：先自行实现最小 Agent，再引入 SDK 和图编排框架。
-- **单 Agent 优先**：只有复杂度与可测得的收益支持时才拆分 Multi-Agent。
-- **可复现**：每个实验有输入、输出、测试与验收标准。
-- **安全默认**：外部数据不具备指令权限；高风险操作必须审批。
-- **证据优先**：课程讲述的是长期有效的设计方法；版本变化以官方文档为准。
+## 进一步阅读与贡献
 
-## 推荐阅读
+- [课程大纲](SYLLABUS.md) · [12 周路线](ROADMAP.md) · [所有实验](labs/README.md)
+- [官方参考资料](references/README.md) · [贡献方式](CONTRIBUTING.md) · [维护约定](AGENTS.md)
 
-详见 [References](references/README.md)。本课程为独立整理的学习计划，不代表 OpenAI、Anthropic、LangChain 或 MCP 项目官方认证。
-
-## 参与完善
-
-欢迎提交 Issue / PR。内容规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-> 状态：**v0.1.0 课程骨架**。主题、练习、项目与代码示例已初始化，部分深入理论和生产级实现将在后续课程迭代。
+> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.2.0：Module 03 讲义与进阶实验已完成，其他模块仍在迭代。
