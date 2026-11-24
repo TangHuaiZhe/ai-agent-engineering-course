@@ -69,7 +69,12 @@ nav:
       - 学习指南: docs/study-guide.md
   - 核心课程:
       - 01 软件工程: modules/01-software-engineering/README.md
-      - 02 LLM 基础: modules/02-llm-foundations/README.md
+      - 02 LLM 基础:
+          - 模块导读: modules/02-llm-foundations/README.md
+          - 02.1 模型与 Token: modules/02-llm-foundations/01-model-basics.md
+          - 02.2 Prompt 与可靠性: modules/02-llm-foundations/02-prompt-and-reliability.md
+          - 02.3 结构化输出: modules/02-llm-foundations/03-structured-outputs.md
+          - 02.4 成本与评测: modules/02-llm-foundations/04-cost-latency-evals.md
       - 03 Agent 架构:
           - 本模块导读: modules/03-agent-architecture/README.md
           - 03.1 Agent 与 Workflow: modules/03-agent-architecture/01-agent-vs-workflow.md
@@ -77,7 +82,12 @@ nav:
           - 03.3 工具调用与恢复: modules/03-agent-architecture/03-tools-observation-recovery.md
           - 03.4 Planning 与多 Agent: modules/03-agent-architecture/04-planning-and-multi-agent.md
           - 03.5 安全边界与评测: modules/03-agent-architecture/05-safety-and-evaluation.md
-      - 04 工具与 MCP: modules/04-tools-mcp/README.md
+      - 04 工具与 MCP:
+          - 模块导读: modules/04-tools-mcp/README.md
+          - 04.1 工具契约: modules/04-tools-mcp/01-tool-contracts.md
+          - 04.2 MCP 协议: modules/04-tools-mcp/02-mcp-protocol.md
+          - 04.3 安全与授权: modules/04-tools-mcp/03-auth-approval-security.md
+          - 04.4 Python MCP SDK v2: modules/04-tools-mcp/04-sdk-v2-practice.md
       - 05 RAG 与记忆: modules/05-rag-memory/README.md
       - 06 工作流编排: modules/06-orchestration/README.md
       - 07 上下文工程: modules/07-context-engineering/README.md
@@ -86,7 +96,9 @@ nav:
       - 10 生产部署: modules/10-production/README.md
   - 实践与项目:
       - 实验索引: labs/README.md
+      - Lab 00 结构化输出: labs/lab-00-structured-output.md
       - Lab 01 有边界的 Agent: labs/lab-01-bounded-agent.md
+      - Lab 02 MCP Server/Client: labs/lab-02-mcp-tools.md
       - 代码示例: examples/README.md
       - 研究 Agent 项目: projects/equity-research-agent/README.md
       - 系统架构: projects/equity-research-agent/ARCHITECTURE.md

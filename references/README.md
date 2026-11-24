@@ -24,3 +24,11 @@
 - 先读概念原文，再读 SDK 文档，最后看开源示例。
 - 做版本相关实验时注明依赖与模型标识；拒绝照搬可能已经过期的代码。
 - 明确区分一手规范、实践博客、个人推测和实测结果。
+
+## MCP Python SDK v2（2026-11 核对）
+
+- [v2 安装与版本要求](https://py.sdk.modelcontextprotocol.io/get-started/installation/)
+- [Host / Client / Server 与三大原语](https://py.sdk.modelcontextprotocol.io/get-started/first-steps/)
+- [MCP Client transports](https://py.sdk.modelcontextprotocol.io/client/transports/)
+- [v1 → v2 重要变动](https://py.sdk.modelcontextprotocol.io/whats-new/)
+- [Python SDK 官方测试方式](https://py.sdk.modelcontextprotocol.io/get-started/testing/)

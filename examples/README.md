@@ -42,3 +42,25 @@ python3 examples/openai_tool_agent.py
 真实模型调用示例使用 OpenAI Responses API 的工具调用形式；不需要赋予文件系统或 Shell 访问权限。建议先读当前官方 [API 文档](https://platform.openai.com/docs/overview) 并检查 SDK 版本。
 
 **不要提交 API Key**，也不要把学习示例的内存授权或模拟处理当成真实产品的安全策略。
+
+## 4. 结构化输出验证（Module 02）
+
+~~~bash
+python3 examples/structured_output_lab.py
+python3 -m unittest tests.test_structured_output_lab -v
+~~~
+
+此示例只使用模拟的上市公司记录，不联网、不进行模型推理。使用类型验证和证据记录映射区分格式正确与事实一致。
+
+## 5. 真正的 MCP Server/Client（Module 04）
+
+~~~bash
+python3 -m pip install -r requirements-mcp-lab.txt
+python3 -m examples.mcp_course_client
+python3 -m unittest tests.test_mcp_task_store -v
+python3 -m unittest tests.test_mcp_course_integration -v
+~~~
+
+使用 MCP Python SDK **v2**，通过 stdio 启动独立 MCP Server，使用 Client 发现并调用 Tools；将权限策略保留在业务层。实验模拟的宿主批准不是 OAuth 或生产级持久化审批。
+
+更多细节：[Module 04](../modules/04-tools-mcp/README.md) · [Lab 02](../labs/lab-02-mcp-tools.md)。
