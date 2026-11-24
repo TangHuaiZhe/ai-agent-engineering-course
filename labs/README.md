@@ -10,7 +10,8 @@
 | **[Lab 03：RAG 与 Memory](lab-03-rag-memory.md)** | 05 | 中级 | **Hybrid Retrieval、Evals、Citation、Memory** |
 | **[Lab 04：可恢复工作流](lab-04-resumable-workflow.md)** | 06 | 中级 | **路由、并行、审批、检查点、幂等** |
 | **[Lab 05：上下文工程](lab-05-context-engineering.md)** | 07 | 中级 | **30 轮三策略对照、预算、来源与可信边界** |
-| Lab 06：Evals 与安全注入 | 08–09 | 进阶 | 规划中 |
-| Lab 07：综合项目生产化 | 10 | 进阶 | 规划中 |
+| **[Lab 06：评测与轨迹](lab-06-evaluation-observability.md)** | 08 | 进阶 | **30 条案例、成对回归、脱敏轨迹** |
+| Lab 07：Agent 安全 | 09 | 进阶 | 规划中 |
+| Lab 08：综合项目生产化 | 10 | 进阶 | 规划中 |
 
 [返回课程首页](../README.md)

@@ -13,7 +13,7 @@
 | 07 | 路由、并行、条件分支、评估优化 | [Module 06 + Lab 04](labs/lab-04-resumable-workflow.md) | 状态转移与有上限的修订测试 |
 | 08 | Checkpoint（检查点）、人审、重试与恢复 | [Lab 04 恢复实验](labs/lab-04-resumable-workflow.md) | 重启、拒绝与幂等性验证 |
 | 09 | Context Engineering（上下文工程）、预算与压缩 | [Module 07 + Lab 05](labs/lab-05-context-engineering.md) | 近似预算与信息保留报告；真实 Token 需另测 |
-| 10 | Evals、Trace、回归与指标 | 20–50 条测试样例 | 基准集、失败分类 |
+| 10 | Evals（评测）、Trace（调用轨迹）、回归与指标 | [Module 08 + Lab 06](labs/lab-06-evaluation-observability.md) | 30 条标准案例、分组差异与失败分类 |
 | 11 | Prompt Injection、权限、沙箱 | 红队测试 | 威胁模型、攻击用例 |
 | 12 | 部署、监控、成本、版本与灾备 | 综合项目 MVP | Demo、运行手册、评测报告 |
 

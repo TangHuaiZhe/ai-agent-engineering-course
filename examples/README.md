@@ -106,3 +106,14 @@ python3 -m unittest tests.test_context_budget_lab -v
 比较完整历史、最近 6 轮和结构化摘要加按需检索；检查近似预算、关键项遗漏、过期事实与工具注入边界。所有资料均为虚构，计数不是模型真实 Token（词元）数。
 
 更多细节：[Module 07](../modules/07-context-engineering/README.md) · [Lab 05](../labs/lab-05-context-engineering.md)。
+
+## 10. 同集评测与脱敏轨迹（Module 08）
+
+~~~bash
+python3 -m examples.evaluation_lab
+python3 -m unittest tests.test_evaluation_lab -v
+~~~
+
+使用 [30 条虚构案例](eval_cases.jsonl)比较两个确定性模拟版本。报告含分类分数、改善/退化案例和数据集指纹；轨迹记录路由、工具与合成步骤，但不记录原始请求或工具文本。它不调用真实模型。
+
+更多细节：[Module 08](../modules/08-evaluation/README.md) · [Lab 06](../labs/lab-06-evaluation-observability.md)。

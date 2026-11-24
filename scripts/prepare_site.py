@@ -27,7 +27,7 @@ ROOT_DOCUMENTS = (
 )
 CONTENT_DIRS = ("modules", "labs", "projects", "references", "docs", "examples", "tests")
 COPY_EXTENSIONS = frozenset(
-    {".md", ".py", ".json", ".yaml", ".yml", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".txt"}
+    {".md", ".py", ".json", ".jsonl", ".yaml", ".yml", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".txt"}
 )
 IGNORED_DIRS = frozenset({"__pycache__", ".venv", "venv", ".pytest_cache", ".mypy_cache"})
 INLINE_LINK = re.compile(r"(\]\()([^)]+)(\))")

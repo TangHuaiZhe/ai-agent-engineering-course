@@ -49,3 +49,11 @@
 - OpenAI — [Evaluation best practices（评测实践）](https://platform.openai.com/docs/guides/evaluation-best-practices)
 
 具体缓存条件和压缩接口随服务与模型而变；课程实验不调用这些 API，也不把教学近似计数当作真实 Token。
+
+## 评测与轨迹（2026-11-24 核对）
+
+- OpenAI — [Evaluation best practices（评测最佳实践）](https://developers.openai.com/api/docs/guides/evaluation-best-practices)
+- OpenTelemetry — [Traces（调用轨迹）](https://opentelemetry.io/docs/concepts/signals/traces/)
+- OpenAI Agents SDK — [Tracing（轨迹记录）](https://openai.github.io/openai-agents-python/tracing/)
+
+Lab 06 自行实现教学用轨迹结构，不使用 OpenTelemetry 协议或 Agents SDK；官方资料用于对照概念与生产实现边界。
