@@ -107,7 +107,12 @@ nav:
           - 07.2 预算、裁剪与缓存: modules/07-context-engineering/02-budget-and-caching.md
           - 07.3 摘要、检索与事实生命周期: modules/07-context-engineering/03-summary-retrieval.md
           - 07.4 长任务评测: modules/07-context-engineering/04-long-task-evals.md
-      - 08 评测与可观测性: modules/08-evaluation/README.md
+      - 08 评测与可观测性:
+          - 模块导读: modules/08-evaluation/README.md
+          - 08.1 案例集与评分契约: modules/08-evaluation/01-gold-dataset.md
+          - 08.2 分组指标与回归: modules/08-evaluation/02-metrics-regression.md
+          - 08.3 轨迹与故障定位: modules/08-evaluation/03-traces-observability.md
+          - 08.4 模型评审与人工校准: modules/08-evaluation/04-judges-human-review.md
       - 09 Agent 安全: modules/09-security/README.md
       - 10 生产部署: modules/10-production/README.md
   - 实践与项目:
@@ -118,6 +123,7 @@ nav:
       - Lab 03 RAG 与 Memory: labs/lab-03-rag-memory.md
       - Lab 04 可恢复工作流: labs/lab-04-resumable-workflow.md
       - Lab 05 上下文工程: labs/lab-05-context-engineering.md
+      - Lab 06 评测与轨迹: labs/lab-06-evaluation-observability.md
       - 代码示例: examples/README.md
       - 研究 Agent 项目: projects/equity-research-agent/README.md
       - 系统架构: projects/equity-research-agent/ARCHITECTURE.md

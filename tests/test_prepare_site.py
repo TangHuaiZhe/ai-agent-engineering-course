@@ -25,6 +25,7 @@ class TestPrepareSite(unittest.TestCase):
             encoding="utf-8"
         )
         (self.root / "examples" / "demo.py").write_text("print('hello')\n", encoding="utf-8")
+        (self.root / "examples" / "cases.jsonl").write_text('{"id":"SIM-01"}\n', encoding="utf-8")
 
     def test_generates_homepage_and_preserves_module_index(self):
         output = self.root / ".site-src"
@@ -40,6 +41,7 @@ class TestPrepareSite(unittest.TestCase):
         output = self.root / ".site-src"
         stage_site(self.root, output)
         self.assertEqual((output / "examples" / "demo.py").read_text(), "print('hello')\n")
+        self.assertEqual((output / "examples" / "cases.jsonl").read_text(), '{"id":"SIM-01"}\n')
 
     def test_cleans_stale_generated_content(self):
         output = self.root / ".site-src"
