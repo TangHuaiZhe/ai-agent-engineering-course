@@ -10,8 +10,8 @@
 | 04 | Function Calling、MCP、身份与审批 | [Lab 02 MCP 与授权](labs/lab-02-mcp-tools.md) | Server/Client 与越权拒绝测试 |
 | 05 | Embedding、Chunking、Hybrid Search、Reranking | [Lab 03 Hybrid RAG + Memory](labs/lab-03-rag-memory.md) | Recall@k / MRR、引用 Gate、记忆更正 |
 | 06 | 短期/长期记忆，状态与知识分层 | [Module 05 Memory 实验](modules/05-rag-memory/05-memory-and-state.md) | Supersede / Delete / Source Policy |
-| 07 | 路由、并行、条件分支、评估优化 | 工作流编排 | 状态转移测试 |
-| 08 | Checkpoint、人审、重试与恢复 | 中断/恢复实验 | 幂等性验证 |
+| 07 | 路由、并行、条件分支、评估优化 | [Module 06 + Lab 04](labs/lab-04-resumable-workflow.md) | 状态转移与有上限的修订测试 |
+| 08 | Checkpoint（检查点）、人审、重试与恢复 | [Lab 04 恢复实验](labs/lab-04-resumable-workflow.md) | 重启、拒绝与幂等性验证 |
 | 09 | Context Engineering、预算与压缩 | 长任务上下文实验 | Token 与质量报告 |
 | 10 | Evals、Trace、回归与指标 | 20–50 条测试样例 | 基准集、失败分类 |
 | 11 | Prompt Injection、权限、沙箱 | 红队测试 | 威胁模型、攻击用例 |
