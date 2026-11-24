@@ -41,3 +41,11 @@
 - Anthropic — [Contextual Retrieval](https://www.anthropic.com/research/contextual-retrieval)
 
 课程中的 Chunk Size、Top-k、Hybrid Weight 和 Reranking 方案都应当作待评测超参数，而不是通用最佳值。
+
+## 上下文工程（2026-11-24 核对）
+
+- OpenAI — [Prompt caching（提示词缓存）](https://developers.openai.com/api/docs/guides/prompt-caching)
+- OpenAI — [Compaction（上下文压缩）](https://developers.openai.com/api/docs/guides/compaction)
+- OpenAI — [Evaluation best practices（评测实践）](https://platform.openai.com/docs/guides/evaluation-best-practices)
+
+具体缓存条件和压缩接口随服务与模型而变；课程实验不调用这些 API，也不把教学近似计数当作真实 Token。

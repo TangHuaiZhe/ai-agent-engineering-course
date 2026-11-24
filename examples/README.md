@@ -95,3 +95,14 @@ python3 -m unittest tests.test_workflow_lab -v
 纯 Python 标准库实验：路由、并行取证、有限评估修订、SQLite 检查点、人工审批与同库幂等报告写入。使用虚构来源，不接入真实外部系统。
 
 更多细节：[Module 06](../modules/06-orchestration/README.md) · [Lab 04](../labs/lab-04-resumable-workflow.md)。
+
+## 9. 30 轮上下文策略对照（Module 07）
+
+~~~bash
+python3 -m examples.context_budget_lab
+python3 -m unittest tests.test_context_budget_lab -v
+~~~
+
+比较完整历史、最近 6 轮和结构化摘要加按需检索；检查近似预算、关键项遗漏、过期事实与工具注入边界。所有资料均为虚构，计数不是模型真实 Token（词元）数。
+
+更多细节：[Module 07](../modules/07-context-engineering/README.md) · [Lab 05](../labs/lab-05-context-engineering.md)。

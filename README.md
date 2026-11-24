@@ -4,7 +4,7 @@
 >
 > 核心目标：把模型的不确定性决策变成可靠、可控、可评测、可审计的软件系统。
 
-![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.5.0%20in%20progress-lightgrey)
+![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.6.0%20in%20progress-lightgrey)
 
 ## 适合谁？
 
@@ -20,12 +20,12 @@
 | **[04](modules/04-tools-mcp/README.md)** | **Tools & MCP** | **4 节讲义 + 真正的 MCP Server/Client + Lab 02** |
 | **[05](modules/05-rag-memory/README.md)** | **RAG & Memory** | **5 节讲义 + Hybrid Retrieval / Memory Lab 03** |
 | **[06](modules/06-orchestration/README.md)** | **Orchestration（工作流编排）** | **4 节讲义 + 可恢复工作流 Lab 04** |
-| [07](modules/07-context-engineering/README.md) | Context Engineering | 上下文预算与可信边界 |
+| **[07](modules/07-context-engineering/README.md)** | **Context Engineering（上下文工程）** | **4 节讲义 + 30 轮策略对照 Lab 05** |
 | [08](modules/08-evaluation/README.md) | Evaluation & Observability | Evals、Trace、回归测试 |
 | [09](modules/09-security/README.md) | Agent Security | 注入防护、权限隔离与审计 |
 | [10](modules/10-production/README.md) | Production Engineering | 部署、限流、故障恢复与 SLO |
 
-Module 02–06 已有分节讲义与可运行实验；Module 07–10 目前以知识地图和实践提纲为主。
+Module 02–07 已有分节讲义与可运行实验；Module 08–10 目前以知识地图和实践提纲为主。
 
 
 ## 在线课程网站（GitHub Pages）
@@ -37,17 +37,18 @@ Module 02–06 已有分节讲义与可运行实验；Module 07–10 目前以�
 ## 从这里开始（当前推荐）
 
 1. 阅读 [先修知识](docs/prerequisites.md) 和 [12 周学习路线](ROADMAP.md)。
-2. 依次学习 [Module 02：LLM 基础](modules/02-llm-foundations/README.md)、[Module 03：Agent 架构](modules/03-agent-architecture/README.md)、[Module 04：MCP](modules/04-tools-mcp/README.md)、[Module 05：RAG 与记忆](modules/05-rag-memory/README.md) 和 [Module 06：工作流编排](modules/06-orchestration/README.md)。
+2. 依次学习 [Module 02：LLM 基础](modules/02-llm-foundations/README.md)、[Module 03：Agent 架构](modules/03-agent-architecture/README.md)、[Module 04：MCP](modules/04-tools-mcp/README.md)、[Module 05：RAG 与记忆](modules/05-rag-memory/README.md)、[Module 06：工作流编排](modules/06-orchestration/README.md)和[Module 07：上下文工程](modules/07-context-engineering/README.md)。
 3. 运行两个不用模型 API Key 的示例：
 
 ~~~bash
 python3 examples/deterministic_loop.py
 python3 examples/bounded_agent.py
 python3 -m examples.workflow_lab
+python3 -m examples.context_budget_lab
 python3 -m unittest discover -s tests -v
 ~~~
 
-4. 依次完成 [Lab 00：结构化输出](labs/lab-00-structured-output.md)、[Lab 01：Agent Loop](labs/lab-01-bounded-agent.md)、[Lab 02：MCP 与授权](labs/lab-02-mcp-tools.md)、[Lab 03：RAG 与记忆](labs/lab-03-rag-memory.md) 和 [Lab 04：可恢复工作流](labs/lab-04-resumable-workflow.md)。
+4. 依次完成 [Lab 00：结构化输出](labs/lab-00-structured-output.md)、[Lab 01：Agent Loop](labs/lab-01-bounded-agent.md)、[Lab 02：MCP 与授权](labs/lab-02-mcp-tools.md)、[Lab 03：RAG 与记忆](labs/lab-03-rag-memory.md)、[Lab 04：可恢复工作流](labs/lab-04-resumable-workflow.md)和[Lab 05：上下文工程](labs/lab-05-context-engineering.md)。
 5. 有真实 API 权限时，再尝试 [可选的真实模型工具调用示例](examples/README.md)。
 
 ## 课程理念
@@ -68,4 +69,4 @@ python3 -m unittest discover -s tests -v
 - [课程大纲](SYLLABUS.md) · [12 周路线](ROADMAP.md) · [所有实验](labs/README.md)
 - [官方参考资料](references/README.md) · [贡献方式](CONTRIBUTING.md) · [维护约定](AGENTS.md)
 
-> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.5.0：Module 02–06 已包含正式讲义与实验，Module 07–10 仍在迭代。
+> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.6.0：Module 02–07 已包含正式讲义与实验，Module 08–10 仍在迭代。
