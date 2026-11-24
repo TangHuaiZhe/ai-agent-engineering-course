@@ -4,7 +4,7 @@
 >
 > 核心目标：把模型的不确定性决策变成可靠、可控、可评测、可审计的软件系统。
 
-![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.2.1%20in%20progress-lightgrey)
+![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.3.0%20in%20progress-lightgrey)
 
 ## 适合谁？
 
@@ -15,9 +15,9 @@
 | 模块 | 主题 | 本课程的交付标准 |
 |---|---|---|
 | [01](modules/01-software-engineering/README.md) | Software Engineering | API、类型、异步与测试基座 |
-| [02](modules/02-llm-foundations/README.md) | LLM Foundations | Prompt、API、Structured Outputs |
+| **[02](modules/02-llm-foundations/README.md)** | **LLM Foundations** | **4 节讲义 + Structured Outputs Lab 00** |
 | **[03](modules/03-agent-architecture/README.md)** | **Agent Architecture** | **5 节正式讲义 + 有边界的 Agent Runner + 测试** |
-| [04](modules/04-tools-mcp/README.md) | Tools & MCP | 工具协议、权限、批准与幂等 |
+| **[04](modules/04-tools-mcp/README.md)** | **Tools & MCP** | **4 节讲义 + 真正的 MCP Server/Client + Lab 02** |
 | [05](modules/05-rag-memory/README.md) | RAG & Memory | 可靠检索、记忆更新与引用 |
 | [06](modules/06-orchestration/README.md) | Orchestration | 路由、并行、Checkpoint、HITL |
 | [07](modules/07-context-engineering/README.md) | Context Engineering | 上下文预算与可信边界 |
@@ -25,7 +25,7 @@
 | [09](modules/09-security/README.md) | Agent Security | 注入防护、权限隔离与审计 |
 | [10](modules/10-production/README.md) | Production Engineering | 部署、限流、故障恢复与 SLO |
 
-除 Module 03 外，其余模块目前以知识地图和实践提纲为主，后续会逐步扩写为完整课程。
+Module 02、03、04 已有分节讲义与实践实验；其他模块目前以知识地图和实践提纲为主，后续逐步完善。
 
 
 ## 在线课程网站（GitHub Pages）
@@ -37,7 +37,7 @@
 ## 从这里开始（当前推荐）
 
 1. 阅读 [先修知识](docs/prerequisites.md) 和 [12 周学习路线](ROADMAP.md)。
-2. 从 [Module 03：Agent 架构](modules/03-agent-architecture/README.md) 进入五节讲义，先明确 Agent 与 Workflow 的区别。
+2. 先读 [Module 02：LLM 基础](modules/02-llm-foundations/README.md)，再进入 [Module 03：Agent 架构](modules/03-agent-architecture/README.md)，最后学习 [Module 04：MCP](modules/04-tools-mcp/README.md)。
 3. 运行两个不用模型 API Key 的示例：
 
 ~~~bash
@@ -46,7 +46,7 @@ python3 examples/bounded_agent.py
 python3 -m unittest discover -s tests -v
 ~~~
 
-4. 完成 [Lab 01：实现有边界的 Agent Loop](labs/lab-01-bounded-agent.md)，至少增加一个失败测试。
+4. 依次完成 [Lab 00：结构化输出](labs/lab-00-structured-output.md)、[Lab 01：Agent Loop](labs/lab-01-bounded-agent.md) 和 [Lab 02：MCP 与授权](labs/lab-02-mcp-tools.md)。
 5. 有真实 API 权限时，再尝试 [可选的真实模型工具调用示例](examples/README.md)。
 
 ## 课程理念
@@ -67,4 +67,4 @@ python3 -m unittest discover -s tests -v
 - [课程大纲](SYLLABUS.md) · [12 周路线](ROADMAP.md) · [所有实验](labs/README.md)
 - [官方参考资料](references/README.md) · [贡献方式](CONTRIBUTING.md) · [维护约定](AGENTS.md)
 
-> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.2.1：Module 03 讲义与进阶实验已完成，其他模块仍在迭代。
+> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.3.0：Module 02/03/04 讲义与实践已初始化，Module 05–10 仍在迭代。

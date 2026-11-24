@@ -1,0 +1,2 @@
+# Optional for Lab 02; official Python MCP SDK v2 (Python 3.11+)
+mcp>=2,<3
