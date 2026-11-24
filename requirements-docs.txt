@@ -1,0 +1,2 @@
+# Python 3.11+; pin the tested documentation generator.
+mkdocs-material==9.8.2

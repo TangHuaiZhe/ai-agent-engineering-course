@@ -1,0 +1,98 @@
+site_name: AI Agent 工程师课程
+site_description: 从原理到生产实践，系统学习 AI Agent Engineering 的中文开源课程
+site_author: TangHuaiZhe
+site_url: https://tanghuaizhe.github.io/ai-agent-engineering-course/
+repo_url: https://github.com/TangHuaiZhe/ai-agent-engineering-course
+repo_name: TangHuaiZhe/ai-agent-engineering-course
+edit_uri: edit/main/
+docs_dir: .site-src
+site_dir: .site-build
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light-blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - 首页: index.md
+  - 学习路线:
+      - 12 周计划: ROADMAP.md
+      - 课程大纲: SYLLABUS.md
+      - 先修知识: docs/prerequisites.md
+      - 学习指南: docs/study-guide.md
+  - 核心课程:
+      - 01 软件工程: modules/01-software-engineering/README.md
+      - 02 LLM 基础: modules/02-llm-foundations/README.md
+      - 03 Agent 架构:
+          - 本模块导读: modules/03-agent-architecture/README.md
+          - 03.1 Agent 与 Workflow: modules/03-agent-architecture/01-agent-vs-workflow.md
+          - 03.2 Agent Loop 与状态: modules/03-agent-architecture/02-agent-loop-and-state.md
+          - 03.3 工具调用与恢复: modules/03-agent-architecture/03-tools-observation-recovery.md
+          - 03.4 Planning 与多 Agent: modules/03-agent-architecture/04-planning-and-multi-agent.md
+          - 03.5 安全边界与评测: modules/03-agent-architecture/05-safety-and-evaluation.md
+      - 04 工具与 MCP: modules/04-tools-mcp/README.md
+      - 05 RAG 与记忆: modules/05-rag-memory/README.md
+      - 06 工作流编排: modules/06-orchestration/README.md
+      - 07 上下文工程: modules/07-context-engineering/README.md
+      - 08 评测与可观测性: modules/08-evaluation/README.md
+      - 09 Agent 安全: modules/09-security/README.md
+      - 10 生产部署: modules/10-production/README.md
+  - 实践与项目:
+      - 实验索引: labs/README.md
+      - Lab 01 有边界的 Agent: labs/lab-01-bounded-agent.md
+      - 代码示例: examples/README.md
+      - 研究 Agent 项目: projects/equity-research-agent/README.md
+      - 系统架构: projects/equity-research-agent/ARCHITECTURE.md
+      - 验收标准: projects/equity-research-agent/ACCEPTANCE.md
+  - 参考与维护:
+      - 官方资料: references/README.md
+      - 贡献指南: CONTRIBUTING.md
+      - 版本记录: CHANGELOG.md
+      - GitHub Pages 部署: docs/deployment.md

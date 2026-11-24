@@ -4,7 +4,7 @@
 >
 > 核心目标：把模型的不确定性决策变成可靠、可控、可评测、可审计的软件系统。
 
-![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.2.0%20in%20progress-lightgrey)
+![Course](https://img.shields.io/badge/course-12%20weeks-blue) ![Language](https://img.shields.io/badge/language-%E4%B8%AD%E6%96%87-brightgreen) ![Status](https://img.shields.io/badge/status-v0.2.1%20in%20progress-lightgrey)
 
 ## 适合谁？
 
@@ -26,6 +26,13 @@
 | [10](modules/10-production/README.md) | Production Engineering | 部署、限流、故障恢复与 SLO |
 
 除 Module 03 外，其余模块目前以知识地图和实践提纲为主，后续会逐步扩写为完整课程。
+
+
+## 在线课程网站（GitHub Pages）
+
+[打开 AI Agent 工程师课程网站](https://tanghuaizhe.github.io/ai-agent-engineering-course/) · [GitHub Pages 部署说明](docs/deployment.md)
+
+网站由 MkDocs Material 生成，支持中文导航、全文搜索、Mermaid 架构图、移动端适配与深浅色主题。仓库 Markdown 是唯一内容来源。**首次启用需在仓库 Settings → Pages 中将 Source 设为 GitHub Actions**；确认部署成功后链接才可正常访问。
 
 ## 从这里开始（当前推荐）
 
@@ -60,4 +67,4 @@ python3 -m unittest discover -s tests -v
 - [课程大纲](SYLLABUS.md) · [12 周路线](ROADMAP.md) · [所有实验](labs/README.md)
 - [官方参考资料](references/README.md) · [贡献方式](CONTRIBUTING.md) · [维护约定](AGENTS.md)
 
-> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.2.0：Module 03 讲义与进阶实验已完成，其他模块仍在迭代。
+> 课程由独立学习者维护，不代表任何模型厂商官方认证。当前版本 v0.2.1：Module 03 讲义与进阶实验已完成，其他模块仍在迭代。

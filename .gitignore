@@ -22,3 +22,8 @@ venv/
 coverage/
 htmlcov/
 *.log
+
+# Generated MkDocs build and staged site
+.site-src/
+.site-build/
+site/
