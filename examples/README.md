@@ -84,3 +84,14 @@ python3 -m unittest tests.test_versioned_memory -v
 演示 Memory Source Policy、Supersede、Current View 与 Delete。它是进程内教学模型，不代表生产隐私删除或持久化记忆服务。
 
 更多细节：[Module 05](../modules/05-rag-memory/README.md) · [Lab 03](../labs/lab-03-rag-memory.md)。
+
+## 8. 可恢复工作流（Module 06）
+
+~~~bash
+python3 -m examples.workflow_lab
+python3 -m unittest tests.test_workflow_lab -v
+~~~
+
+纯 Python 标准库实验：路由、并行取证、有限评估修订、SQLite 检查点、人工审批与同库幂等报告写入。使用虚构来源，不接入真实外部系统。
+
+更多细节：[Module 06](../modules/06-orchestration/README.md) · [Lab 04](../labs/lab-04-resumable-workflow.md)。

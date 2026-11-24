@@ -8,7 +8,7 @@
 | **[Lab 01：有边界的 Agent Loop](lab-01-bounded-agent.md)** | 01–03 | 入门 → 进阶 | **完整实验指南与测试** |
 | **[Lab 02：MCP 与授权](lab-02-mcp-tools.md)** | 04 | 中级 | **完整实验指南与协议示例** |
 | **[Lab 03：RAG 与 Memory](lab-03-rag-memory.md)** | 05 | 中级 | **Hybrid Retrieval、Evals、Citation、Memory** |
-| Lab 04：可恢复 Workflow | 06–07 | 中级 | 规划中 |
+| **[Lab 04：可恢复工作流](lab-04-resumable-workflow.md)** | 06 | 中级 | **路由、并行、审批、检查点、幂等** |
 | Lab 05：Evals 与安全注入 | 08–09 | 进阶 | 规划中 |
 | Lab 06：综合项目生产化 | 10 | 进阶 | 规划中 |
 
