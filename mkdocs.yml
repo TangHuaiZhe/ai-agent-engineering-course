@@ -101,7 +101,12 @@ nav:
           - 06.2 路由、并行与评估修订: modules/06-orchestration/02-routing-parallel-evaluator.md
           - 06.3 检查点与失败恢复: modules/06-orchestration/03-checkpoint-resume.md
           - 06.4 人工审批与幂等: modules/06-orchestration/04-approval-idempotency.md
-      - 07 上下文工程: modules/07-context-engineering/README.md
+      - 07 上下文工程:
+          - 模块导读: modules/07-context-engineering/README.md
+          - 07.1 上下文分层与可信边界: modules/07-context-engineering/01-context-layers.md
+          - 07.2 预算、裁剪与缓存: modules/07-context-engineering/02-budget-and-caching.md
+          - 07.3 摘要、检索与事实生命周期: modules/07-context-engineering/03-summary-retrieval.md
+          - 07.4 长任务评测: modules/07-context-engineering/04-long-task-evals.md
       - 08 评测与可观测性: modules/08-evaluation/README.md
       - 09 Agent 安全: modules/09-security/README.md
       - 10 生产部署: modules/10-production/README.md
@@ -112,6 +117,7 @@ nav:
       - Lab 02 MCP Server/Client: labs/lab-02-mcp-tools.md
       - Lab 03 RAG 与 Memory: labs/lab-03-rag-memory.md
       - Lab 04 可恢复工作流: labs/lab-04-resumable-workflow.md
+      - Lab 05 上下文工程: labs/lab-05-context-engineering.md
       - 代码示例: examples/README.md
       - 研究 Agent 项目: projects/equity-research-agent/README.md
       - 系统架构: projects/equity-research-agent/ARCHITECTURE.md
