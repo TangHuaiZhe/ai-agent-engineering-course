@@ -8,8 +8,8 @@
 | 02 | Transformer/Token、LLM API、结构化输出 | [Lab 00 结构化抽取](labs/lab-00-structured-output.md) | 输出验证与评测记录 |
 | **03** | **Agent Loop、状态、权限、预算** | **[Module 03 + Lab 01](labs/lab-01-bounded-agent.md)** | **Runner、失败测试、状态机** |
 | 04 | Function Calling、MCP、身份与审批 | [Lab 02 MCP 与授权](labs/lab-02-mcp-tools.md) | Server/Client 与越权拒绝测试 |
-| 05 | Embedding、Chunking、Hybrid Search、Reranking | RAG 小数据集 | 检索基准与引用核验 |
-| 06 | 短期/长期记忆，状态与知识分层 | 记忆策略与更新 | 冲突与删除测试 |
+| 05 | Embedding、Chunking、Hybrid Search、Reranking | [Lab 03 Hybrid RAG + Memory](labs/lab-03-rag-memory.md) | Recall@k / MRR、引用 Gate、记忆更正 |
+| 06 | 短期/长期记忆，状态与知识分层 | [Module 05 Memory 实验](modules/05-rag-memory/05-memory-and-state.md) | Supersede / Delete / Source Policy |
 | 07 | 路由、并行、条件分支、评估优化 | 工作流编排 | 状态转移测试 |
 | 08 | Checkpoint、人审、重试与恢复 | 中断/恢复实验 | 幂等性验证 |
 | 09 | Context Engineering、预算与压缩 | 长任务上下文实验 | Token 与质量报告 |

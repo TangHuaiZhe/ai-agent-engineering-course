@@ -32,3 +32,12 @@
 - [MCP Client transports](https://py.sdk.modelcontextprotocol.io/client/transports/)
 - [v1 → v2 重要变动](https://py.sdk.modelcontextprotocol.io/whats-new/)
 - [Python SDK 官方测试方式](https://py.sdk.modelcontextprotocol.io/get-started/testing/)
+
+## Retrieval / RAG（2026-11 核对）
+
+- OpenAI — [Retrieval guide](https://developers.openai.com/api/docs/guides/retrieval)
+- OpenAI — [File Search](https://developers.openai.com/api/docs/guides/tools-file-search)
+- OpenAI — [Embeddings](https://developers.openai.com/api/docs/guides/embeddings)
+- Anthropic — [Contextual Retrieval](https://www.anthropic.com/research/contextual-retrieval)
+
+课程中的 Chunk Size、Top-k、Hybrid Weight 和 Reranking 方案都应当作待评测超参数，而不是通用最佳值。

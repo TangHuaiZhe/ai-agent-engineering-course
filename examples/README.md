@@ -64,3 +64,23 @@ python3 -m unittest tests.test_mcp_course_integration -v
 使用 MCP Python SDK **v2**，通过 stdio 启动独立 MCP Server，使用 Client 发现并调用 Tools；将权限策略保留在业务层。实验模拟的宿主批准不是 OAuth 或生产级持久化审批。
 
 更多细节：[Module 04](../modules/04-tools-mcp/README.md) · [Lab 02](../labs/lab-02-mcp-tools.md)。
+
+## 6. Hybrid Retrieval 与检索评测（Module 05）
+
+~~~bash
+python3 examples/rag_hybrid_lab.py
+python3 -m unittest tests.test_rag_hybrid_lab -v
+~~~
+
+实现简化 BM25、教学用 semantic-like Retriever、Reciprocal Rank Fusion、Recall@k / MRR 和 Citation Gate。semantic-like Retriever 使用显式同义词映射，**不是 Embedding 模型**，目的是让 Hybrid Search 行为完全可复现。
+
+## 7. 版本化 Memory（Module 05）
+
+~~~bash
+python3 examples/versioned_memory.py
+python3 -m unittest tests.test_versioned_memory -v
+~~~
+
+演示 Memory Source Policy、Supersede、Current View 与 Delete。它是进程内教学模型，不代表生产隐私删除或持久化记忆服务。
+
+更多细节：[Module 05](../modules/05-rag-memory/README.md) · [Lab 03](../labs/lab-03-rag-memory.md)。

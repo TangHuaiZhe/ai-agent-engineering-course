@@ -88,7 +88,13 @@ nav:
           - 04.2 MCP 协议: modules/04-tools-mcp/02-mcp-protocol.md
           - 04.3 安全与授权: modules/04-tools-mcp/03-auth-approval-security.md
           - 04.4 Python MCP SDK v2: modules/04-tools-mcp/04-sdk-v2-practice.md
-      - 05 RAG 与记忆: modules/05-rag-memory/README.md
+      - 05 RAG 与记忆:
+          - 模块导读: modules/05-rag-memory/README.md
+          - 05.1 RAG 系统边界: modules/05-rag-memory/01-rag-system.md
+          - 05.2 Chunking 与 Provenance: modules/05-rag-memory/02-chunking-provenance.md
+          - 05.3 Hybrid Retrieval: modules/05-rag-memory/03-hybrid-retrieval.md
+          - 05.4 Retrieval Evals: modules/05-rag-memory/04-retrieval-evals.md
+          - 05.5 Memory 与 State: modules/05-rag-memory/05-memory-and-state.md
       - 06 工作流编排: modules/06-orchestration/README.md
       - 07 上下文工程: modules/07-context-engineering/README.md
       - 08 评测与可观测性: modules/08-evaluation/README.md
@@ -99,6 +105,7 @@ nav:
       - Lab 00 结构化输出: labs/lab-00-structured-output.md
       - Lab 01 有边界的 Agent: labs/lab-01-bounded-agent.md
       - Lab 02 MCP Server/Client: labs/lab-02-mcp-tools.md
+      - Lab 03 RAG 与 Memory: labs/lab-03-rag-memory.md
       - 代码示例: examples/README.md
       - 研究 Agent 项目: projects/equity-research-agent/README.md
       - 系统架构: projects/equity-research-agent/ARCHITECTURE.md

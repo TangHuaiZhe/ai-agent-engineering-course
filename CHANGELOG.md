@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.4.0 — 2026-11-24
+
+- Module 05 扩展为 5 节 RAG / Retrieval / Memory 正式讲义。
+- 新增 Lab 03：简化 BM25、semantic-like 检索、RRF Hybrid、Recall@k / MRR、Citation Gate。
+- 新增版本化 Memory 示例，覆盖可信来源、Supersede、Delete 与冲突治理。
+- 补充当前托管 Retrieval 的 Hybrid Search / Metadata Filter 资料，并强调参数必须通过业务 Eval 验证。
+- 更新 GitHub Pages 导航、12 周路线和示例索引。
+
+
 ## v0.3.0 — 2026-11-24
 
 - 将 Module 02 扩展为四节 LLM 基础讲义，并加入 Lab 00 结构化输出验证器和边界测试。
